@@ -4651,7 +4651,7 @@ PUGI__NS_BEGIN
 	{
 	#ifdef PUGIXML_WCHAR_MODE
 		char_t wbuf[128];
-		assert(strlen(buf) < sizeof(wbuf) / sizeof(wbuf[0]));
+        assert(::strlen(buf) < sizeof(wbuf) / sizeof(wbuf[0]));
 
 		size_t offset = 0;
 		for (; buf[offset]; ++offset) wbuf[offset] = buf[offset];
